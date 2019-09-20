@@ -1,0 +1,71 @@
+apiVersion: v1
+entries:
+  cainjector:
+  - apiVersion: v1
+    appVersion: v0.1.0
+    created: "2019-09-20T13:15:39.138071+09:00"
+    description: A Helm chart for deploying the cert-manager cainjector component
+    digest: c28acca11a46df2908a4c15cefee949f226b5ba25659894c373cb3c974152b15
+    home: https://github.com/jetstack/cert-manager
+    keywords:
+    - cert-manager
+    - kube-lego
+    - letsencrypt
+    - tls
+    maintainers:
+    - email: james@jetstack.io
+      name: munnerz
+    name: cainjector
+    sources:
+    - https://github.com/jetstack/cert-manager
+    urls:
+    - cainjector/cainjector-v0.1.0.tgz
+    version: v0.1.0
+  - apiVersion: v1
+    appVersion: v0.1.0
+    created: "2019-09-20T13:15:39.138454+09:00"
+    description: A Helm chart for deploying the cert-manager cainjector component
+    digest: 1334ad599f16a2236831063a56359a96618131bcb7671e464f51d04e9e3afd63
+    home: https://github.com/jetstack/cert-manager
+    keywords:
+    - cert-manager
+    - kube-lego
+    - letsencrypt
+    - tls
+    maintainers:
+    - email: james@jetstack.io
+      name: munnerz
+    name: cainjector
+    sources:
+    - https://github.com/jetstack/cert-manager
+    urls:
+    - charts/cainjector-v0.1.0.tgz
+    version: v0.1.0
+  cert-manager:
+  - apiVersion: v1
+    appVersion: v0.1.0
+    created: "2019-09-20T13:15:39.137756+09:00"
+    dependencies:
+    - condition: cainjector.enabled
+      name: cainjector
+      repository: file://cainjector
+      version: v0.1.0
+    description: A Helm chart for cert-manager
+    digest: 0fbe69188c66ccf49e40bb59364a1114ba690be2b9a582dc164af770ee97362f
+    home: https://github.com/jetstack/cert-manager
+    icon: https://raw.githubusercontent.com/jetstack/cert-manager/master/logo/logo.png
+    keywords:
+    - cert-manager
+    - kube-lego
+    - letsencrypt
+    - tls
+    maintainers:
+    - email: james@jetstack.io
+      name: munnerz
+    name: cert-manager
+    sources:
+    - https://github.com/jetstack/cert-manager
+    urls:
+    - cert-manager-v0.1.0.tgz
+    version: v0.1.0
+generated: "2019-09-20T13:15:39.1365+09:00"
